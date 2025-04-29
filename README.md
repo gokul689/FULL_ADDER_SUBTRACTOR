@@ -44,12 +44,25 @@ Write the detailed procedure here
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by:GOKUL H PRASAD
+ RegisterNumber:212224050011
 */
+```
+module EXP2(a,b,cin,sum,carry,c,d,bin,difference,borrow);
+input a,b,cin,c,d,bin;
+output sum,carry,difference,borrow;
+assign sum=( (a ^ b)^cin);
+assign carry= ( (a & b)| ( cin &(a ^ b )));
+assign difference= ( (c ^ d)^bin);
+assign borrow= ( ( ~c & d)| ( bin & (~(c ^ d ))));
+endmodule
+```
 
 **RTL Schematic**
+![image](https://github.com/user-attachments/assets/5b65b67e-39bc-40e4-9f5e-e3a989e6c09a)
 
 **Output Timing Waveform**
+![image](https://github.com/user-attachments/assets/033147a4-686e-42ef-aa66-725204840f8b)
 
 **Result:**
 
